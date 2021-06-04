@@ -5,3 +5,11 @@ services:
     build: ./
     ports:
         - 9999:3000
+  pet_shop_nginx:
+    container_name: pet_shop_nginx
+    image: nginx
+    volumes:
+      - ./public/dist:/usr/share/nginx/html
+      - ./nginx_conf/conf.d:/etc/nginx/conf.d
+    ports:
+        - 9898:80
