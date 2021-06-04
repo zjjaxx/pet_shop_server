@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  pet_shop_server:
+    container_name: pet_shop_server
+    build: ./
+    ports:
+        - 9999:3000
